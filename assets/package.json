@@ -1,0 +1,36 @@
+{
+    "name": "Mediator-test",
+    "version": "1.0.0",
+    "description": "jsStructure",
+    "main": "assets/",
+    "author": "Milan van As<milanvanas@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "clean": "rimraf ../private_html/assets",
+        "build": "yarn clean && webpack --progress",
+        "build:production": "yarn clean && webpack -p --progress",
+        "watch": "yarn clean && webpack --progress --watch",
+        "watch:production": "yarn clean && webpack --progress --watch -p",
+        "devserver": "yarn clean && webpack-dev-server --progress"
+    },
+    "dependencies": {
+        "ck.js": "https://github.com/Milanzor/ck.js.git",
+        "jquery": "^3.2.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.0.0-beta.34",
+        "@babel/preset-env": "^7.0.0-beta.34",
+        "babel-loader": "8.0.0-beta.0",
+        "babel-preset-minify": "^0.2.0",
+        "css-loader": "^0.28.7",
+        "expose-loader": "^0.7.4",
+        "extract-text-webpack-plugin": "^3.0.2",
+        "file-loader": "^1.1.5",
+        "node-sass": "^4.7.2",
+        "rimraf": "^2.6.2",
+        "sass-loader": "^6.0.6",
+        "webpack": "^3.10.0",
+        "webpack-dev-server": "^2.9.5",
+        "wildcards-entry-webpack-plugin": "https://github.com/Milanzor/wildcards-entry-webpack-plugin.git"
+    }
+}

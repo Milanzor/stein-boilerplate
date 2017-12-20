@@ -1,3 +1,12 @@
+# Mac crap
+.DS_Store
+
+# Compile folder
+private_html/assets
+
+# PhpStorm
+.idea
+
 # Logs
 logs
 *.log
