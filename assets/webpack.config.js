@@ -28,7 +28,6 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: options.outputPath,
-        publicPath: '/assets/'
     },
 
     // Resolve
@@ -39,7 +38,7 @@ module.exports = {
     // Devserver
     devServer: {
         contentBase: path.resolve(__dirname, 'test'),
-        compress: true,
+        publicPath: '/assets/',
         open: true,
         port: 8080
     },
