@@ -1,6 +1,9 @@
 import {AppModule} from "AppModule";
 import $ from 'jquery'
 
+import './Core.scss';
+
+
 export class Core extends AppModule {
 
     constructor() {

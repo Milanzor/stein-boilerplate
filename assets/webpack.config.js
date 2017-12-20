@@ -1,7 +1,17 @@
+// Path
 const path = require('path');
+
+// Define options
+const options = {
+    outputPath: path.resolve(__dirname, 'test', 'assets'),
+    moduleDirs: [path.resolve(__dirname, 'lib'), path.resolve(__dirname, 'modules'), 'node_modules'],
+};
+
+
+// Get webpack and some plugins
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WildcardsEntryWebpackPlugin = require('wildcards-entry-webpack-plugin');
-const webpack = require('webpack');
 
 // Initialize the extract plugin to extract css to a different file
 const extractPlugin = new ExtractTextPlugin({
@@ -17,12 +27,12 @@ module.exports = {
     // Output
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, '..', 'private_html', 'assets'),
-        publicPath: '/assets/'
+        path: options.outputPath,
+        publicPath: 'assets/'
     },
 
     resolve: {
-        modules: [path.resolve(__dirname, 'lib'), path.resolve(__dirname, 'modules'), 'node_modules']
+        modules: options.moduleDirs
     },
 
     // Module
@@ -85,7 +95,7 @@ module.exports = {
 
     // Devserver
     devServer: {
-        contentBase: path.join(__dirname, 'private_html'),
+        contentBase: path.resolve(__dirname, 'test'),
         compress: true,
         open: true,
         port: 8080

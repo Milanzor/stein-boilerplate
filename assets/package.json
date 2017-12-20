@@ -6,12 +6,11 @@
     "author": "Milan van As<milanvanas@gmail.com>",
     "license": "MIT",
     "scripts": {
-        "clean": "rimraf ../private_html/assets",
-        "build": "yarn clean && webpack --progress",
-        "build:production": "yarn clean && webpack -p --progress",
-        "watch": "yarn clean && webpack --progress --watch",
-        "watch:production": "yarn clean && webpack --progress --watch -p",
-        "devserver": "yarn clean && webpack-dev-server --progress"
+        "build": "webpack --progress",
+        "build:production": "webpack -p --progress",
+        "watch": "webpack --progress --watch",
+        "watch:production": "webpack --progress --watch -p",
+        "devserver": "webpack-dev-server --progress"
     },
     "dependencies": {
         "ck.js": "https://github.com/Milanzor/ck.js.git",
