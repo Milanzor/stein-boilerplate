@@ -28,11 +28,20 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: options.outputPath,
-        publicPath: 'assets/'
+        publicPath: '/assets/'
     },
 
+    // Resolve
     resolve: {
         modules: options.moduleDirs
+    },
+
+    // Devserver
+    devServer: {
+        contentBase: path.resolve(__dirname, 'test'),
+        compress: true,
+        open: true,
+        port: 8080
     },
 
     // Module
@@ -91,13 +100,5 @@ module.exports = {
             filename: "commons.js",
             minChunks: 2,
         }),
-    ],
-
-    // Devserver
-    devServer: {
-        contentBase: path.resolve(__dirname, 'test'),
-        compress: true,
-        open: true,
-        port: 8080
-    }
+    ]
 };
