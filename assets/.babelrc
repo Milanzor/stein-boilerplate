@@ -35,6 +35,23 @@
           }
         ]
       ]
+    },
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "useBuiltIns": "entry",
+            "debug": false,
+            "targets": {
+              "browsers": [
+                "last 2 versions",
+                "ie 9"
+              ]
+            }
+          }
+        ]
+      ]
     }
   }
 }
