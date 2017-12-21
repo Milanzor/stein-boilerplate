@@ -1,12 +1,40 @@
 {
-  "presets": [
-    ["@babel/preset-env", {
-      "useBuiltIns": "entry",
-      "debug": false,
-      "modules": false,
-      "targets": {
-      	"browsers": ["last 2 versions", "ie 9"]
-      }
-    }]
-  ]
+  "env": {
+    "development": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "useBuiltIns": "entry",
+            "debug": false,
+            "modules": false,
+            "targets": {
+              "browsers": [
+                "last 2 versions",
+                "ie 9"
+              ]
+            }
+          }
+        ]
+      ]
+    },
+    "production": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "useBuiltIns": "entry",
+            "debug": false,
+            "modules": false,
+            "targets": {
+              "browsers": [
+                "last 2 versions",
+                "ie 9"
+              ]
+            }
+          }
+        ]
+      ]
+    }
+  }
 }
