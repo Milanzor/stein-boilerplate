@@ -1,39 +1,38 @@
 {
-    "name": "ck-boilerplate",
-    "version": "1.0.0",
-    "description": "CK.js boilerplate app",
-    "main": "assets/",
-    "author": "Milan van As <milanvanas@gmail.com>",
-    "license": "MIT",
-    "scripts": {
-        "build": "NODE_ENV=development webpack --progress",
-        "build:production": "NODE_ENV=production webpack -p --progress",
-        "watch": "NODE_ENV=development webpack --progress --watch",
-        "watch:production": "NODE_ENV=production webpack --progress --watch -p",
-        "devserver": "NODE_ENV=development webpack-dev-server --progress",
-        "test": "NODE_ENV=test jest"
-    },
-    "dependencies": {
-        "ck.js": "https://github.com/Milanzor/ck.js.git",
-        "jquery": "^3.2.1"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.0.0-beta.34",
-        "@babel/preset-env": "^7.0.0-beta.34",
-        "babel-jest": "^22.0.3",
-        "babel-loader": "8.0.0-beta.0",
-        "babel-preset-es2015": "^6.24.1",
-        "babel-preset-minify": "^0.2.0",
-        "css-loader": "^0.28.7",
-        "expose-loader": "^0.7.4",
-        "extract-text-webpack-plugin": "^3.0.2",
-        "file-loader": "^1.1.5",
-        "jest": "^22.0.3",
-        "node-sass": "^4.7.2",
-        "rimraf": "^2.6.2",
-        "sass-loader": "^6.0.6",
-        "webpack": "^3.10.0",
-        "webpack-dev-server": "^2.9.5",
-        "wildcards-entry-webpack-plugin": "https://github.com/Milanzor/wildcards-entry-webpack-plugin.git"
-    }
+  "name": "ck-boilerplate",
+  "version": "1.0.0",
+  "description": "CK.js boilerplate app",
+  "main": "assets/",
+  "author": "Milan van As <milanvanas@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "NODE_ENV=development webpack --progress",
+    "build:production": "NODE_ENV=production webpack -p --progress",
+    "watch": "NODE_ENV=development webpack --progress --watch",
+    "watch:production": "NODE_ENV=production webpack --progress --watch -p",
+    "devserver": "NODE_ENV=development webpack-dev-server --progress"
+  },
+  "dependencies": {
+    "ck.js": "https://github.com/Milanzor/ck.js.git",
+    "jquery": "^3.2.1",
+    "material-design-icons": "^3.0.1",
+    "materialize-css": "^0.100.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.34",
+    "@babel/preset-env": "^7.0.0-beta.34",
+    "babel-loader": "8.0.0-beta.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-minify": "^0.2.0",
+    "css-loader": "^0.28.7",
+    "expose-loader": "^0.7.4",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "node-sass": "^4.7.2",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.6",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.5",
+    "wildcards-entry-webpack-plugin": "https://github.com/Milanzor/wildcards-entry-webpack-plugin.git"
+  }
 }
