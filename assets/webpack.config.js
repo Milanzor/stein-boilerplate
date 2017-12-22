@@ -12,6 +12,7 @@ const options = {
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WebpackWatchedGlobEntries = require('webpack-watched-glob-entries-plugin');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 // Initialize the extract plugin to extract css to a different file
 const extractPlugin = new ExtractTextPlugin({
@@ -105,5 +106,6 @@ module.exports = {
             filename: "commons.js",
             minChunks: 2,
         }),
+        new DashboardPlugin(),
     ]
 };
