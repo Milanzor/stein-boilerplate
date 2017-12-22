@@ -10,7 +10,8 @@
     "build:production": "NODE_ENV=production webpack -p --progress",
     "watch": "NODE_ENV=development webpack --progress --watch",
     "watch:production": "NODE_ENV=production webpack --progress --watch -p",
-    "devserver": "NODE_ENV=development webpack-dev-server --progress"
+    "devserver": "NODE_ENV=development webpack-dev-server --progress",
+    "dashboard": "webpack-dashboard -- yarn devserver"
   },
   "dependencies": {
     "ck.js": "https://github.com/Milanzor/ck.js.git",
@@ -32,6 +33,7 @@
     "sass-loader": "^6.0.6",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.5",
+    "webpack-dashboard": "^1.0.2",
     "webpack-watched-glob-entries-plugin": "^1.0.4"
   }
 }
