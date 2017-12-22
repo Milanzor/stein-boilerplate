@@ -8,13 +8,13 @@ After cloning this repo:
 - Delete .git, .gitignore, README.md
 - Run `yarn install` inside the assets directory
 
-The following commands are available:
+The following commands are available in the assets directory:
 
-`yarn devserver`
-`yarn build`
-`yarn build:production`
-`yarn watch`
-`yarn watch:production`
+- `yarn devserver`
+- `yarn build`
+- `yarn build:production`
+- `yarn watch`
+- `yarn watch:production`
 
 
 Make sure you change the paths in webpack.config.js, currently, the output goes to assets/test/assets
