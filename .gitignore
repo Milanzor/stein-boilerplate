@@ -2,7 +2,7 @@
 .DS_Store
 
 # Compile folder
-private_html/assets
+assets/test/assets
 
 # PhpStorm
 .idea

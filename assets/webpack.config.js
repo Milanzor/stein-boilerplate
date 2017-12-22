@@ -11,7 +11,7 @@ const options = {
 // Get webpack and some plugins
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const WildcardsEntryWebpackPlugin = require('wildcards-entry-webpack-plugin');
+const WebpackWatchedGlobEntries = require('webpack-watched-glob-entries-plugin');
 
 // Initialize the extract plugin to extract css to a different file
 const extractPlugin = new ExtractTextPlugin({
@@ -21,8 +21,14 @@ const extractPlugin = new ExtractTextPlugin({
 // Config
 module.exports = {
 
-    // Entry
-    entry: WildcardsEntryWebpackPlugin.entry(path.resolve(__dirname, 'entry/**/*.js'), false, false, {ignore: '**/*.test.js'}),
+    entry: WebpackWatchedGlobEntries.getEntries(
+      [
+        path.resolve(__dirname, 'entry/**/*.js')
+      ],
+      {
+          ignore: '**/*.test.js'
+      }
+    ),
 
     // Output
     output: {
@@ -93,7 +99,7 @@ module.exports = {
     // Plugins
     plugins: [
         extractPlugin,
-        new WildcardsEntryWebpackPlugin(),
+        new WebpackWatchedGlobEntries(),
         new webpack.optimize.CommonsChunkPlugin({
             name: "commons",
             filename: "commons.js",
