@@ -1,18 +1,10 @@
 // Path
 const path = require('path');
 
-// Define options
-const options = {
-    outputPath: path.resolve(__dirname, 'test', 'assets'),
-    moduleDirs: [path.resolve(__dirname, 'lib'), path.resolve(__dirname, 'modules'), 'node_modules'],
-};
-
-
 // Get webpack and some plugins
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WebpackWatchedGlobEntries = require('webpack-watched-glob-entries-plugin');
-const DashboardPlugin = require('webpack-dashboard/plugin');
 
 // Initialize the extract plugin to extract css to a different file
 const extractPlugin = new ExtractTextPlugin({
@@ -23,23 +15,23 @@ const extractPlugin = new ExtractTextPlugin({
 module.exports = {
 
     entry: WebpackWatchedGlobEntries.getEntries(
-      [
-        path.resolve(__dirname, 'entry/**/*.js')
-      ],
-      {
-          ignore: '**/*.test.js'
-      }
+        [
+            path.resolve(__dirname, 'entry/**/*.js')
+        ],
+        {
+            ignore: '**/*.test.js'
+        }
     ),
 
     // Output
     output: {
         filename: '[name].js',
-        path: options.outputPath,
+        path: path.resolve(__dirname, 'test', 'assets'),
     },
 
     // Resolve
     resolve: {
-        modules: options.moduleDirs
+        modules: [path.resolve(__dirname, 'lib'), path.resolve(__dirname, 'modules'), 'node_modules']
     },
 
     // Devserver
@@ -106,6 +98,5 @@ module.exports = {
             filename: "commons.js",
             minChunks: 2,
         }),
-        new DashboardPlugin(),
     ]
 };
