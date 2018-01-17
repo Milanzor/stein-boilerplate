@@ -5,6 +5,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WebpackWatchedGlobEntries = require('webpack-watched-glob-entries-plugin');
+const Jarvis = require('webpack-jarvis');
 
 // Initialize the extract plugin to extract css to a different file
 const extractPlugin = new ExtractTextPlugin({
@@ -32,14 +33,6 @@ module.exports = {
     // Resolve
     resolve: {
         modules: [path.resolve(__dirname, 'lib'), path.resolve(__dirname, 'modules'), 'node_modules']
-    },
-
-    // Devserver
-    devServer: {
-        contentBase: path.resolve(__dirname, 'public'),
-        publicPath: '/assets/',
-        open: true,
-        port: 8080
     },
 
     // Module
@@ -96,7 +89,10 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: "commons",
             filename: "commons.js",
-            minChunks: 2,
+            minChunks: 2
         }),
+        new Jarvis({
+            port: 1337
+        })
     ]
 };

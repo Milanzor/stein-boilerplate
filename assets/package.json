@@ -30,6 +30,7 @@
     "sass-loader": "^6.0.6",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.0",
+    "webpack-jarvis": "^0.2.2",
     "webpack-watched-glob-entries-plugin": "^1.1.0"
   }
 }
