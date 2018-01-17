@@ -8,7 +8,7 @@ const WebpackWatchedGlobEntries = require('webpack-watched-glob-entries-plugin')
 
 // Initialize the extract plugin to extract css to a different file
 const extractPlugin = new ExtractTextPlugin({
-    filename: '[name].min.css',
+    filename: '[name].css'
 });
 
 // Config
@@ -26,7 +26,7 @@ module.exports = {
     // Output
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, 'test', 'assets'),
+        path: path.resolve(__dirname, 'public', 'assets'),
     },
 
     // Resolve
@@ -36,7 +36,7 @@ module.exports = {
 
     // Devserver
     devServer: {
-        contentBase: path.resolve(__dirname, 'test'),
+        contentBase: path.resolve(__dirname, 'public'),
         publicPath: '/assets/',
         open: true,
         port: 8080
