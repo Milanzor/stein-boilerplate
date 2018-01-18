@@ -1,8 +1,7 @@
-import {AppModule} from "AppModule";
+import {AppModule} from "../../lib/AppModule";
 import $ from 'jquery'
 
 import './Core.scss';
-
 
 export class Core extends AppModule {
 

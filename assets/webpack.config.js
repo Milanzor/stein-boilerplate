@@ -30,11 +30,6 @@ module.exports = {
         path: path.resolve(__dirname, 'public', 'assets'),
     },
 
-    // Resolve
-    resolve: {
-        modules: [path.resolve(__dirname, 'lib'), path.resolve(__dirname, 'modules'), 'node_modules']
-    },
-
     // Module
     module: {
         rules: [
