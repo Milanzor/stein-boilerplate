@@ -5,7 +5,7 @@
     "main": "assets/",
     "author": "Milan van As <milanvanas@gmail.com>",
     "license": "MIT",
-    "test": "yarn test",
+    "test": "npm run test",
     "scripts": {
         "build": "NODE_ENV=development webpack --progress",
         "build:production": "yarn test && NODE_ENV=production webpack -p --progress",
