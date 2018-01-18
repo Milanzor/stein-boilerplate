@@ -4,3 +4,4 @@ node_js:
 install:
   - yarn install
   - yarn build:production
+script: yarn build:production
