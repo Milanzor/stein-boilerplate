@@ -9,7 +9,6 @@ After cloning this repo:
 
 The following commands are available in the assets directory:
 
-- `yarn devserver`
 - `yarn build`
 - `yarn build:production`
 - `yarn watch`
