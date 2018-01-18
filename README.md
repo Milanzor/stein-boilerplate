@@ -13,8 +13,14 @@ The following commands are available in the assets directory:
 - `yarn build:production`
 - `yarn watch`
 - `yarn watch:production`
+- `yarn test`
+- `yarn test:production`
 
 
 Make sure you change the paths in webpack.config.js, currently, the output goes to assets/public/assets
 
-GL!
+# How to use
+
+- Make modules that extend AppModule
+- Dispatch them in an entry file
+- Write tests with `mocha`
