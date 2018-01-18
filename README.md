@@ -16,8 +16,6 @@ The following commands are available in the assets directory:
 - `yarn watch:production`
 
 
-Make sure you change the paths in webpack.config.js, currently, the output goes to assets/test/assets
-
-Running `yarn devserver` will run webpack dev server with the assets/test as base
+Make sure you change the paths in webpack.config.js, currently, the output goes to assets/public/assets
 
 GL!
