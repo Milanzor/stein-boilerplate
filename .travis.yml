@@ -1,7 +1,4 @@
 language: node_js
 node_js:
   - "9"
-install:
-  - yarn install
-  - yarn build:production
 script: yarn build:production
