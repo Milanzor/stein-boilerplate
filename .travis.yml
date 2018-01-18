@@ -1,0 +1,5 @@
+language: node_js
+before_install: cd assets
+install:
+  - npm install
+  - npm run build:production
