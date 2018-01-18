@@ -1,7 +1,7 @@
 {
-  "name": "ck-boilerplate",
+  "name": "stein-boilerplate",
   "version": "1.0.0",
-  "description": "CK.js boilerplate app",
+  "description": "stein.js boilerplate app",
   "main": "assets/",
   "author": "Milan van As <milanvanas@gmail.com>",
   "license": "MIT",
