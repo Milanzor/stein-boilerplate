@@ -7,14 +7,13 @@
     "license": "MIT",
     "scripts": {
         "build": "NODE_ENV=development webpack --progress",
-        "build:production": "NODE_ENV=production webpack -p --progress",
+        "build:production": "yarn test && NODE_ENV=production webpack -p --progress",
         "watch": "NODE_ENV=development webpack --progress --watch",
         "watch:production": "NODE_ENV=production webpack --progress --watch -p",
-        "test": "NODE_ENV=test mocha --require ignore-styles --require babel-register --colors ./app/**/*.test.js",
-        "test:watch": "NODE_ENV=test mocha --require ignore-styles --require babel-register --colors -w ./app/**/*.test.js"
+        "test": "NODE_ENV=test mocha --require ignore-styles --require babel-register --require jsdom-global/register --colors ./app/**/*.test.js",
+        "test:watch": "NODE_ENV=test mocha --require ignore-styles --require babel-register --require jsdom-global/register --colors -w ./app/**/*.test.js"
     },
     "dependencies": {
-        "jquery": "^3.2.1",
         "stein": "^1.0.1"
     },
     "devDependencies": {
@@ -27,6 +26,8 @@
         "extract-text-webpack-plugin": "^3.0.2",
         "file-loader": "^1.1.5",
         "ignore-styles": "^5.0.1",
+        "jsdom": "^11.5.1",
+        "jsdom-global": "^3.0.2",
         "mocha": "^5.0.0",
         "node-sass": "^4.7.2",
         "rimraf": "^2.6.2",

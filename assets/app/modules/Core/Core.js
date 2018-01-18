@@ -1,5 +1,4 @@
-import {AppModule} from "../../lib/AppModule";
-import $ from 'jquery'
+import {AppModule} from '../../lib/AppModule'
 
 import './Core.scss';
 
@@ -8,10 +7,11 @@ export class Core extends AppModule {
     constructor() {
         super();
 
+        // Ref to this
         let self = this;
-        $(function () {
-            self.publish('DOMReady');
-        });
+
+        // on DOMContentLoaded, publish DOMReady
+        document.addEventListener("DOMContentLoaded", () => self.publish('DOMReady'));
     }
 }
 

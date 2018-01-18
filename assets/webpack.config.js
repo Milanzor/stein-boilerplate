@@ -51,18 +51,6 @@ module.exports = {
 
             },
 
-            // Provide plugin, jquery
-            {
-                test: require.resolve('jquery'),
-                use: [{
-                    loader: 'expose-loader',
-                    options: 'jQuery'
-                }, {
-                    loader: 'expose-loader',
-                    options: '$'
-                }]
-            },
-
             // Font rules
             {
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
