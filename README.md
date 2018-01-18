@@ -1,3 +1,5 @@
+![travis-build][travis-build]
+
 # Stein.js Boilerplate
 
 Boilerplate app mostly for personal use, feel free to check it out, but it's probably not your cup-o-tea
@@ -24,3 +26,6 @@ Make sure you change the paths in webpack.config.js, currently, the output goes 
 - Make modules that extend AppModule
 - Dispatch them in an entry file
 - Write tests with `mocha`
+
+
+[travis-build]: https://api.travis-ci.org/Milanzor/stein-boilerplate.svg?branch=master
