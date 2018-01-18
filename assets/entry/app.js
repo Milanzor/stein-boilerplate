@@ -1,5 +1,5 @@
 'use strict';
-import {Dispatch} from "ck.js";
+import {Dispatch} from "stein";
 
 import {Core} from "../modules/Core/Core";
 

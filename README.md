@@ -1,7 +1,6 @@
-# CK Boilerplate
+# Stein.js Boilerplate
 
 Boilerplate app mostly for personal use, feel free to check it out, but it's probably not your cup-o-tea
-
 
 After cloning this repo:
 

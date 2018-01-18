@@ -1,5 +1,5 @@
 // Get DefaultModule
-import {DefaultModule} from 'ck.js';
+import {DefaultModule} from 'stein';
 
 /**
  *
