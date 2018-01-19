@@ -1,4 +1,5 @@
-![travis-build][travis-build]
+![travis-build]
+![david-dm-status]
 
 # Stein.js Boilerplate
 
@@ -29,3 +30,4 @@ Make sure you change the paths in webpack.config.js, currently, the output goes 
 
 
 [travis-build]: https://api.travis-ci.org/Milanzor/stein-boilerplate.svg?branch=master
+[david-dm-status]: https://david-dm.org/milanzor/stein-boilerplate.svg
