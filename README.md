@@ -1,5 +1,5 @@
-![travis-build]
-![david-dm-status]
+![travis-build][https://travis-ci.org/Milanzor/stein-boilerplate]
+![david-dm-status][https://david-dm.org/milanzor/stein-boilerplate]
 
 # Stein.js Boilerplate
 
