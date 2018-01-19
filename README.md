@@ -20,7 +20,7 @@ The following commands are available in the assets directory:
 - `yarn test:production`
 
 
-Make sure you change the paths in webpack.config.js, currently, the output goes to assets/public/assets
+Make sure you change the paths in webpack.config.js, currently, the output goes to public/assets
 
 # How to use
 
