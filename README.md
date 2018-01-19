@@ -1,6 +1,8 @@
 [![travis-build][travis-build]][travis-build-url]
 [![david-dm-status][david-dm-status]][david-dm-status-url]
 
+
+
 # Stein.js Boilerplate
 
 Boilerplate app mostly for personal use, feel free to check it out, but it's probably not your cup-o-tea
