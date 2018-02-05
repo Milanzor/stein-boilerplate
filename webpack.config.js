@@ -1,81 +1,11 @@
-// Path
-const path = require('path');
-
-// Get webpack and some plugins
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const WebpackWatchedGlobEntries = require('webpack-watched-glob-entries-plugin');
-const Jarvis = require('webpack-jarvis');
-
-// Initialize the extract plugin to extract css to a different file
-const extractPlugin = new ExtractTextPlugin({
-    filename: '[name].css'
-});
+const webpackMerge = require('webpack-merge');
 
 // Config
-module.exports = {
-
-    entry: WebpackWatchedGlobEntries.getEntries(
-        [
-            path.resolve(__dirname, 'entry/**/*.js')
-        ],
-        {
-            ignore: '**/*.test.js'
-        }
-    ),
-
-    // Output
-    output: {
-        filename: '[name].js',
-        path: path.resolve(__dirname, 'public', 'assets'),
-    },
-
-    // Module
-    module: {
-        rules: [
-
-            // SCSS rule
-            {
-                test: /\.scss$/,
-                use: extractPlugin.extract({
-                    use: ['css-loader', 'sass-loader']
-                })
-            },
-
-            // Babel rule
-            {
-                test: /\.js$/,
-                use: [
-                    'babel-loader',
-                ],
-
-            },
-
-            // Font rules
-            {
-                test: /\.(eot|svg|ttf|woff|woff2)$/,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: 'fonts/[name].[ext]'
-                    }
-                },
-            }
-
-        ],
-    },
-
-    // Plugins
-    plugins: [
-        extractPlugin,
-        new WebpackWatchedGlobEntries(),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: "commons",
-            filename: "commons.js",
-            minChunks: 2
-        }),
-        new Jarvis({
-            port: 1337
-        })
-    ]
+module.exports = (env) => {
+    if(typeof env !== 'object' || !'env' in env){
+        throw new TypeError('Provide --env.env=prod or dev in your command');
+    }
+    const envConfig = require(`./build-utils/webpack.${env.env}`)(env);
+    const commonConfig = require(`./build-utils/webpack.common`)(env);
+    return webpackMerge(commonConfig, envConfig);
 };
