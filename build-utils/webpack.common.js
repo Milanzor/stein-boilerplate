@@ -1,7 +1,6 @@
 // Get webpack plugins and other deps
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const WebpackWatchedGlobEntries = require('webpack-watched-glob-entries-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const commonPaths = require('./common-paths');
 
@@ -19,19 +18,8 @@ const htmlPluginOptions = {
 // Config function
 module.exports = (env) => {
 
-    const entries = WebpackWatchedGlobEntries.getEntries(
-        [
-            commonPaths.entryPath
-        ],
-        {
-            ignore: '**/*.test.js'
-        }
-    );
 
     return {
-
-        entry: entries,
-
         // Output
         output: {
             filename: '[name].js',
@@ -78,7 +66,6 @@ module.exports = (env) => {
         // Plugins
         plugins: [
             extractPlugin,
-            new WebpackWatchedGlobEntries(),
             new webpack.optimize.CommonsChunkPlugin({
                 name: "commons",
                 filename: "commons.js",
