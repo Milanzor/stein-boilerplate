@@ -16,7 +16,8 @@
     "watch:dev": "yarn watch --env.env=dev",
     "watch:prod": "yarn watch --env.env=prod",
     "test": "mocha --require ignore-styles --require babel-register --require jsdom-global/register --colors ./app/**/*.test.js",
-    "test:watch": "yarn test -w"
+    "test:watch": "yarn test -w",
+    "travis": "yarn test && yarn build:prod"
   },
   "dependencies": {
     "node-normalize-scss": "^3.0.0",
