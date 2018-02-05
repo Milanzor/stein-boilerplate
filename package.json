@@ -15,7 +15,7 @@
     "watch": "yarn build --watch",
     "watch:dev": "yarn watch --env.env=dev",
     "watch:prod": "yarn watch --env.env=prod",
-    "test": "BABEL_ENV=test mocha --require ignore-styles --require babel-register --require jsdom-global/register --colors ./app/**/*.test.js",
+    "test": "cross-env BABEL_ENV=test mocha --require ignore-styles --require babel-register --require jsdom-global/register --colors ./app/**/*.test.js",
     "test:watch": "yarn test -w",
     "travis": "yarn test && yarn build:prod"
   },
@@ -31,6 +31,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
+    "cross-env": "^5.1.3",
     "css-loader": "^0.28.8",
     "expose-loader": "^0.7.4",
     "extract-text-webpack-plugin": "^3.0.2",
