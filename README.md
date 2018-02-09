@@ -10,19 +10,22 @@ Boilerplate app mostly for personal use, feel free to check it out, but it's pro
 After cloning this repo:
 
 - Delete .git, .gitignore, README.md
-- Run `yarn install` inside the assets directory
+- Run `yarn install` to install dependencies
 
-The following commands are available in the assets directory:
+The following commands are available  directory:
 
-- `yarn build`
-- `yarn build:production`
-- `yarn watch`
-- `yarn watch:production`
-- `yarn test`
-- `yarn test:production`
+- `yarn clean` => Removes the public dir
+- `yarn build:dev` => Build project in development mode
+- `yarn build:prod` => Build project in production mode
+- `yarn dev` => webpack-dev-server --env.env=dev
+- `yarn watch:dev` =>  Watch project and build in development mode
+- `yarn watch:prod` => Watch project and build in production mode
+- `yarn test` => Runs all `*.test.js` files with Mocha
+- `yarn test:watch` => Watches all *.test.js and retests on change
 
 
-Make sure you change the paths in webpack.config.js, currently, the output goes to public/assets
+
+Make sure you change the paths in webpack.config.js, currently, the output goes to public/
 
 # How to use
 
