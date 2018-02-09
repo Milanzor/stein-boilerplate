@@ -1,6 +1,5 @@
-'use strict';
-import {Dispatch} from "stein";
+import { Dispatch } from 'stein';
 
-import {Core} from "../app/modules/Core/Core";
+import Core from '../app/modules/Core/Core';
 
 Dispatch([Core]);
