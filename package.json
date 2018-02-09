@@ -17,6 +17,7 @@
     "watch:prod": "yarn watch --env.env=prod",
     "test": "cross-env BABEL_ENV=test mocha --require ignore-styles --require babel-register --require jsdom-global/register --colors ./app/**/*.test.js",
     "test:watch": "yarn test -w",
+    "serve": "serve public",
     "travis": "yarn test && yarn build:prod"
   },
   "dependencies": {
@@ -48,6 +49,7 @@
     "node-sass": "^4.7.2",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6",
+    "serve": "^6.4.9",
     "style-loader": "^0.20.1",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.0",
