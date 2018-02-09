@@ -45,6 +45,7 @@ module.exports = (env) => {
                     test: /\.js$/,
                     use: [
                         'babel-loader',
+                        'eslint-loader',
                     ],
 
                 },
