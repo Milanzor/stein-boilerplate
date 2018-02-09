@@ -1,8 +1,7 @@
-import * as assert from 'assert';
-
 import AppModule from '../../lib/AppModule';
 import Core from './Core';
 
+const assert = require('assert');
 
 describe('Core', () => {
     it('must an instance of AppModule', () => {
