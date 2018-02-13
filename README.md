@@ -22,7 +22,7 @@ The following commands are available  directory:
 - `yarn watch:prod` => Watch project and build in production mode
 - `yarn test` => Runs all `*.test.js` files with Mocha
 - `yarn test:watch` => Watches all *.test.js and retests on change
-
+- `yarn serve` => Serve's content from ./public
 
 
 Make sure you change the paths in webpack.config.js, currently, the output goes to public/
