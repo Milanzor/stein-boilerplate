@@ -6082,9 +6082,9 @@ stealthy-require@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
 
-stein@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/stein/-/stein-1.0.1.tgz#084ca6d7a9e206a2157fdaf1a2430f2f9957b7c6"
+stein@^1.x:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/stein/-/stein-1.0.4.tgz#de0162de7ab12152c3f75cb5f3fd14d77dc68301"
 
 stream-browserify@^2.0.1:
   version "2.0.1"

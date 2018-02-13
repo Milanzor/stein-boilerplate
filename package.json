@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "node-normalize-scss": "^3.0.0",
-    "stein": "^1.0.1"
+    "stein": "^1.x"
   },
   "engines": {
     "node": ">=8.0.0"
