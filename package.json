@@ -52,8 +52,7 @@
     "style-loader": "^0.20.1",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.0",
-    "webpack-jarvis": "^0.3.0",
     "webpack-merge": "^4.1.1",
-    "webpack-watched-glob-entries-plugin": "^1.1.1"
+    "webpack-watched-glob-entries-plugin": "^2.1.0"
   }
 }
