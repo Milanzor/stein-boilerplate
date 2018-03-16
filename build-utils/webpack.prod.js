@@ -21,5 +21,7 @@ module.exports = (env) => {
         plugins: [
             new WebpackWatchedGlobEntries(),
         ],
+
+        mode: 'production',
     };
 };

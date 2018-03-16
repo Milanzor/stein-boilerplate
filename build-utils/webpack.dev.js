@@ -27,5 +27,7 @@ module.exports = (env) => {
         open: true
     };
 
+    config.mode = 'development';
+
     return config;
 };
