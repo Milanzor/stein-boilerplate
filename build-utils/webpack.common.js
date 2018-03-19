@@ -1,15 +1,8 @@
 // Get webpack plugins and other deps
-const webpack = require('webpack');
+const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const commonPaths = require('./common-paths');
-
-// Check to see if we have a template for our apps index.html
-const htmlPluginOptions = {
-    title: 'Stein.js',
-    template: './build-utils/template.index.html'
-};
+const commonPaths = require("./common-paths");
 
 // Config function
 module.exports = (env) => {
@@ -17,9 +10,10 @@ module.exports = (env) => {
     return {
         // Output
         output: {
-            filename: '[name].js',
+            filename: "[name].js",
             path: commonPaths.outputPath,
-            publicPath: '/',
+            chunkFilename: "commons.js",
+            publicPath: "/",
         },
 
         // Module
@@ -31,8 +25,8 @@ module.exports = (env) => {
                     test: /\.scss$/,
                     use: [
                         MiniCssExtractPlugin.loader,
-                        'css-loader',
-                        'sass-loader',
+                        "css-loader",
+                        "sass-loader",
 
                     ]
                 },
@@ -41,7 +35,7 @@ module.exports = (env) => {
                 {
                     test: /\.js$/,
                     use: [
-                        'babel-loader',
+                        "babel-loader",
                     ],
 
                 },
@@ -50,9 +44,9 @@ module.exports = (env) => {
                 {
                     test: /\.(eot|svg|ttf|woff|woff2)$/,
                     use: {
-                        loader: 'file-loader',
+                        loader: "file-loader",
                         options: {
-                            name: 'fonts/[name].[ext]'
+                            name: "fonts/[name].[ext]"
                         }
                     },
                 }
@@ -62,13 +56,19 @@ module.exports = (env) => {
         optimization: {
             splitChunks: {
                 chunks: "all",
-                minChunks: 2,
+                cacheGroups: {
+                    commons: {
+                        name: "commons",
+                        chunks: "all",
+                        minChunks: 2,
+                        enforce: true
+                    },
+                },
             }
         },
         // Plugins
         plugins: [
             new MiniCssExtractPlugin(),
-            new HtmlWebpackPlugin(htmlPluginOptions),
         ]
     };
 };
