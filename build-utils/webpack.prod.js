@@ -9,14 +9,7 @@ const commonPaths = require('./common-paths');
 module.exports = (env) => {
 
     return {
-        entry: WebpackWatchedGlobEntries.getEntries(
-            [
-                commonPaths.entryPath
-            ],
-            {
-                ignore: '**/*.test.js'
-            }
-        ),
+        entry: WebpackWatchedGlobEntries.getEntries([commonPaths.entryPath], {ignore: '**/*.test.js'}),
         devtool: "source-map",
         plugins: [
             new WebpackWatchedGlobEntries(),

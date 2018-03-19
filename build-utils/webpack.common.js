@@ -1,7 +1,5 @@
 // Get webpack plugins and other deps
-const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 const commonPaths = require("./common-paths");
 
 // Config function

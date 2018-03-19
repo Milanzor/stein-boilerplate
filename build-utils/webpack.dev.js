@@ -10,7 +10,6 @@ const commonPaths = require('./common-paths');
 
 module.exports = (env) => {
 
-
     const config = {
         devtool: "eval-source-map",
     };
@@ -20,12 +19,6 @@ module.exports = (env) => {
     config.plugins = [
         new WebpackWatchedGlobEntries(),
     ];
-
-    config.devServer = {
-        port: 9000,
-        compress: true,
-        open: true
-    };
 
     config.mode = 'development';
 
