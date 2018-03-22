@@ -1,7 +1,11 @@
 // Get webpack plugins and other deps
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const commonPaths = require("./common-paths");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+// Initialize the extract plugin to extract css to a different file
+const extractPlugin = new ExtractTextPlugin({
+    filename: '[name].css'
+});
 // Config function
 module.exports = (env) => {
 
@@ -21,12 +25,12 @@ module.exports = (env) => {
                 // SCSS rule
                 {
                     test: /\.scss$/,
-                    use: [
-                        MiniCssExtractPlugin.loader,
-                        "css-loader",
-                        "sass-loader",
-
-                    ]
+                    loader: ExtractTextPlugin.extract({
+                        use: [
+                            "css-loader",
+                            "sass-loader",
+                        ]
+                    })
                 },
 
                 // Babel rule
@@ -66,7 +70,7 @@ module.exports = (env) => {
         },
         // Plugins
         plugins: [
-            new MiniCssExtractPlugin(),
+            extractPlugin,
         ]
     };
 };
